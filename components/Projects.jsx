@@ -1,95 +1,175 @@
-"use client"
-import React from 'react';
-import { motion } from 'framer-motion';
-import { GithubIcon, ExternalLinkIcon } from 'lucide-react';
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { GithubIcon, ExternalLinkIcon } from "lucide-react";
+import Image from "next/image";
 
 const fadeInUp = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
 };
 
+// ✅ Tes vrais projets
 const projects = [
   {
-    title: 'Customer Churn Prediction',
+    title: "Optimisation de la retouchabilité de pièces industrielles",
+    subtitle: "Data Science industrielle · Aide à la décision",
     description:
-      'Built a machine learning model to predict customer churn with 94% accuracy using ensemble methods and feature engineering.',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
-    github: '#',
-    demo: '#',
+      "Projet industriel visant à estimer la probabilité de re-conformité de pièces non conformes afin d’améliorer la prise de décision en atelier et réduire le gaspillage.",
+    highlights: [
+      "Structuration et fiabilisation de données industrielles hétérogènes",
+      "Feature engineering orienté métier et contraintes terrain",
+      "Modélisation prédictive pour éclairer la décision humaine",
+      "Restitution des résultats sous forme d’indicateurs compréhensibles",
+    ],
+    stack: ["Python", "NoSQL", "Data Science", "Industrial Data"],
+    impact:
+      "Réduction du gaspillage, meilleure anticipation des retouches et décisions plus homogènes.",
+    github: "",
+    demo: "",
+    caseStudy: "/projects/safran-retouchabilite",
+    image: "/project-safran.png",
+    confidential: true,
   },
   {
-    title: 'Sales Dashboard Analytics',
+    title: "Chatbot RAG – Support & contenu de cours",
+    subtitle: "IA Générative · NLP",
     description:
-      'Interactive dashboard visualizing sales performance metrics, trends, and forecasts for executive decision-making.',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    tags: ['Tableau', 'SQL', 'Python', 'ETL'],
-    github: '#',
-    demo: '#',
+      "Assistant intelligent capable de répondre aux questions en combinant réponse directe, recherche documentaire (RAG) et lecture de fichiers.",
+    highlights: [
+      "Pipeline RAG : ingestion de documents, embeddings et retrieval",
+      "Orchestration d’agents et gestion des sources",
+      "Focus sur la qualité des réponses et la robustesse",
+    ],
+    stack: ["Python", "LangChain", "LLM", "Vector DB"],
+    impact: "Accès plus rapide à l’information et réduction du temps de recherche.",
+    github: "https://github.com/Gwaldyso/01-llm-rag-chatbot",
+    demo: "",
+    caseStudy: "/projects/rag-chatbot",
+    image: "/project-rag.png",
   },
   {
-    title: 'NLP Sentiment Analysis',
+    title: "Dashboard décisionnel – Analyse & reporting Netflix",
+    subtitle: "Business Intelligence · Pilotage",
     description:
-      'Deep learning model for analyzing customer reviews sentiment, processing 100K+ reviews with 91% accuracy.',
-    image:
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop',
-    tags: ['Python', 'TensorFlow', 'NLP', 'BERT'],
-    github: '#',
-    demo: '#',
+      "Analyse exploratoire et création d’un dashboard décisionnel à partir des données Netflix pour faciliter le suivi des indicateurs clés.",
+    highlights: [
+      "Exploration et structuration des données",
+      "Création d’indicateurs pertinents pour le pilotage",
+      "Visualisations claires orientées décision",
+    ],
+    stack: ["Power BI", "SQL", "Excel"],
+    impact: "Meilleure lisibilité des KPIs et compréhension des tendances.",
+    github: "https://github.com/Gwaldyso/04-powerbi-Netflix",
+    demo: "",
+    caseStudy: "/projects/netflix-dashboard",
+    image: "/project-netflix.png",
   },
   {
-    title: 'Time Series Forecasting',
+    title: "Shopping Time Prediction",
+    subtitle: "Machine Learning · Prédiction comportementale",
     description:
-      'Developed ARIMA and Prophet models for demand forecasting, reducing inventory costs by 23%.',
-    image:
-      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
-    tags: ['Python', 'Prophet', 'ARIMA', 'Plotly'],
-    github: '#',
-    demo: '#',
+      "Modèle de prédiction du temps passé par un client lors d’une session d’achat en ligne, à partir de données comportementales.",
+    highlights: [
+      "Analyse exploratoire et préparation des données",
+      "Feature engineering sur les comportements utilisateurs",
+      "Entraînement et évaluation de modèles prédictifs",
+    ],
+    stack: ["Python", "Pandas", "scikit-learn"],
+    impact:
+      "Meilleure compréhension du comportement client et potentiel d’optimisation des parcours.",
+    github: "https://github.com/Gwaldyso/05-shopping-time-prediction",
+    demo: "",
+    caseStudy: "/projects/shopping-time-prediction",
+    image: "/project-shopping.png",
   },
 ];
 
-function ProjectCard({ title, description, image, tags, github, demo }) {
+function ProjectCard({
+  title,
+  subtitle,
+  description,
+  highlights,
+  stack,
+  impact,
+  github,
+  demo,
+  image,
+  confidential,
+}) {
   return (
-    <motion.div
+    <motion.article
       variants={fadeInUp}
-      whileHover={{
-        y: -8,
-        transition: {
-          duration: 0.3,
-        },
-      }}
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+      whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col"
     >
-      <div className="aspect-video overflow-hidden bg-gray-100">
-        <img
+      {/* ✅ Image immersive avec zoom */}
+      <div className="relative h-56 overflow-hidden">
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          priority={false}
         />
+        {/* léger overlay pour le contraste */}
+        <div className="absolute inset-0 bg-black/5" />
       </div>
-      <div className="p-6 space-y-4">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-        <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+
+      <div className="p-6 space-y-4 flex-1 flex flex-col">
+        <div className="space-y-2">
+          {subtitle && (
+            <p className="text-sm font-mono text-teal-600">{subtitle}</p>
+          )}
+
+          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+
+          {confidential && (
+            <p className="text-xs font-mono text-red-500">
+              🔒 Projet industriel confidentiel
+            </p>
+          )}
+
+          <p className="text-sm text-gray-600 leading-relaxed">
+            {description}
+          </p>
+        </div>
+
+        {/* Highlights */}
+        {highlights?.length > 0 && (
+          <ul className="space-y-2">
+            {highlights.map((item) => (
+              <li key={item} className="text-sm text-gray-600 flex gap-2">
+                <span className="text-teal-500 mt-1">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Stack */}
         <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
+          {stack.map((tech) => (
             <span
-              key={tag}
-              className="px-3 py-1 text-xs font-mono bg-gray-50 text-gray-600 rounded-full"
+              key={tech}
+              className="px-3 py-1 text-xs font-mono bg-gray-50 text-gray-600 rounded-full border border-gray-100"
             >
-              {tag}
+              {tech}
             </span>
           ))}
         </div>
-        <div className="flex gap-3 pt-2">
+
+        {/* Impact */}
+        {impact && (
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold text-gray-900">Impact :</span>{" "}
+            {impact}
+          </p>
+        )}
+
+        {/* Liens (sans case study) */}
+        <div className="flex gap-4 pt-2 mt-auto items-center">
           {github && (
             <a
               href={github}
@@ -101,7 +181,8 @@ function ProjectCard({ title, description, image, tags, github, demo }) {
               Code
             </a>
           )}
-          {demo && (
+
+          {demo ? (
             <a
               href={demo}
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-teal-600 transition-colors"
@@ -109,34 +190,41 @@ function ProjectCard({ title, description, image, tags, github, demo }) {
               rel="noopener noreferrer"
             >
               <ExternalLinkIcon className="w-4 h-4" />
-              Demo
+              Démo
             </a>
+          ) : (
+            <span className="text-sm text-gray-400">Démo bientôt</span>
           )}
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
+
 
 export default function Projects() {
   return (
     <motion.section
       className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
       id="projects"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeInUp} className="text-center space-y-4 mb-12">
           <span className="text-sm font-mono text-teal-600 tracking-wider uppercase">
-            Portfolio
+            Projets
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Featured Projects
+            Réalisations & études de cas
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A selection of data science projects showcasing my analytical and
-            technical capabilities
+            Une sélection de projets data & IA orientés impact : de l’analyse à la
+            décision.
           </p>
         </motion.div>
+
         <div className="grid sm:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />

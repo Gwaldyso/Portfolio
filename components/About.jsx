@@ -49,30 +49,57 @@ export default function About() {
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <motion.div variants={fadeInUp} className="space-y-4">
           <span className="text-sm font-mono text-teal-600 tracking-wider uppercase">
-            About Me
+            À propos de moi
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Turning Data Into Decisions
+            Ingénieure Data & Intelligence Artificielle
           </h2>
         </motion.div>
         <motion.p
           variants={fadeInUp}
           className="text-lg text-gray-600 leading-relaxed"
         >
-          I'm a passionate data scientist with expertise in machine learning,
-          statistical modeling, and data visualization. My journey started with
-          a curiosity about patterns hidden in numbers, which led me to pursue a
-          career in data science.
+          
         </motion.p>
-        <motion.p
+        <motion.div
           variants={fadeInUp}
-          className="text-lg text-gray-600 leading-relaxed"
+          className="text-sm text-gray-600 leading-relaxed space-y-4"
         >
-          I specialize in building predictive models, creating insightful
-          dashboards, and developing data pipelines that help organizations
-          leverage their data assets. I believe in the power of data to
-          transform businesses and drive innovation.
-        </motion.p>
+          <p>
+            Je m’appelle Gwaldys, ingénieure en Big Data & Intelligence Artificielle,
+            passionnée par la manière dont la donnée peut transformer des situations
+            complexes en décisions claires et actionnables. J’ai construit mon parcours
+            avec exigence et curiosité, à travers un diplôme d’ingénieure en Big Data
+            Analytics à CY Tech (ex-EISTI) et un Master 2 en Data & IA à HETIC. Ces
+            expériences m’ont permis de développer une approche à la fois rigoureuse et
+            pragmatique de la data.
+          </p>
+
+          <p>
+            Au fil de mes missions en tant que Data Manager, Data Analyst et Data
+            Scientist, notamment en environnement industriel chez Safran, j’ai appris à
+            travailler sur des projets concrets, soumis à de fortes contraintes métiers.
+            J’y ai développé une conviction forte : une solution data n’a de valeur que
+            si elle est comprise, utilisée et utile sur le terrain.
+          </p>
+
+          <p>
+            Récemment certifiée en IA générative, je m’oriente aujourd’hui vers ce domaine
+            en plein essor avec l’envie de concevoir des solutions innovantes,
+            responsables et orientées impact. Mon objectif est d’aider les organisations
+            à prendre des décisions stratégiques alignées avec leur réalité
+            opérationnelle, grâce à des approches data-driven.
+          </p>
+
+          <p>
+            À travers ce portfolio, je partage ma manière de penser, de structurer et de
+            résoudre des problématiques grâce à la data et à l’intelligence artificielle.
+          </p>
+
+          <p className="signature">
+            <strong>Data & IA</strong> pour des décisions utiles et responsables.
+          </p>
+        </motion.div>
         <motion.div
           variants={fadeInUp}
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8"

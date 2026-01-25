@@ -8,23 +8,23 @@ export default function Footer() {
     <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-500">
-          © 2026 Shivesh. All rights reserved.
+          © 2026 Gwaldys. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://github.com/Gwaldyso"
             className="text-gray-400 hover:text-teal-600 transition-colors"
           >
             <GithubIcon className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/gwaldys-otounga/"
             className="text-gray-400 hover:text-teal-600 transition-colors"
           >
             <LinkedinIcon className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="mailto:gwaldyso@gmail.com"
             className="text-gray-400 hover:text-teal-600 transition-colors"
           >
             <MailIcon className="w-5 h-5" />

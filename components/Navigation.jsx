@@ -23,26 +23,26 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <span className="font-semibold text-gray-900">
-            shivesh<span className="text-teal-500">.</span>
+            Gwaldys<span className="text-teal-500">.</span>
           </span>
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#about"
               className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
             >
-              About
+              À propos
             </a>
             <a
               href="#skills"
               className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
             >
-              Skills
+              Compétences
             </a>
             <a
               href="#projects"
               className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
             >
-              Projects
+              Projets
             </a>
             <a
               href="#experience"
@@ -59,13 +59,13 @@ export default function Navigation() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="#"
+              href="https://github.com/Gwaldyso"
               className="text-gray-600 hover:text-teal-600 transition-colors"
             >
               <GithubIcon className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/gwaldys-otounga/"
               className="text-gray-600 hover:text-teal-600 transition-colors"
             >
               <LinkedinIcon className="w-5 h-5" />

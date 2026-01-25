@@ -32,11 +32,11 @@ const skills = [
         level: 88,
     },
     {
-        name: 'Data Visualization',
+        name: 'Data visualisation',
         level: 92,
     },
     {
-        name: 'Statistics',
+        name: 'Deep Learning',
         level: 87,
     },
     {
@@ -45,7 +45,7 @@ const skills = [
     },
     {
         name: 'TensorFlow / PyTorch',
-        level: 80,
+        level: 65,
     },
     {
         name: 'Tableau / Power BI',
@@ -69,7 +69,7 @@ function SkillBadge({ name, level }) {
             };
         if (level >= 80)
             return {
-                label: 'Advanced',
+                label: 'Avancée',
                 dots: 3,
                 color: 'bg-teal-400',
             };
@@ -80,7 +80,7 @@ function SkillBadge({ name, level }) {
                 color: 'bg-gray-400',
             };
         return {
-            label: 'Intermediate',
+            label: 'Intermédiaire',
             dots: 1,
             color: 'bg-gray-300',
         };
@@ -146,33 +146,40 @@ function SkillBadge({ name, level }) {
 }
 
 export default function Skills() {
-    return (
-        <motion.section
-            className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"
-            id="skills"
+  return (
+    <motion.section
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      id="skills"
+    >
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          variants={fadeInUp}
+          className="text-center space-y-4 mb-12"
         >
-            <div className="max-w-6xl mx-auto">
-                <motion.div variants={fadeInUp} className="text-center space-y-4 mb-12">
-                    <span className="text-sm font-mono text-teal-600 tracking-wider uppercase">
-                        Technical Skills
-                    </span>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                        My Expertise
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        A comprehensive toolkit for tackling complex data challenges
-                    </p>
-                </motion.div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {skills.map((skill) => (
-                        <SkillBadge
-                            key={skill.name}
-                            name={skill.name}
-                            level={skill.level}
-                        />
-                    ))}
-                </div>
-            </div>
-        </motion.section>
-    );
+          <span className="text-sm font-mono text-teal-600 tracking-wider uppercase">
+            Tech Stack
+          </span>
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Outils & technologies
+          </h2>
+
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Les technologies que j’utilise pour analyser, modéliser et
+            transformer la donnée en décisions utiles.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {skills.map((skill) => (
+            <SkillBadge
+              key={skill.name}
+              name={skill.name}
+              level={skill.level}
+            />
+          ))}
+        </div>
+      </div>
+    </motion.section>
+  );
 }
