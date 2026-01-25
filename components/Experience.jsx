@@ -147,7 +147,7 @@ export default function Experience() {
             Carrières
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Experiences proffessionnelles
+            Expériences proffessionnelles
           </h2>
         </motion.div>
 
