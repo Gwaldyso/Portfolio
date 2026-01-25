@@ -101,7 +101,7 @@ export default function Hero() {
                 }}
                 className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 border border-gray-100"
               >
-                <div className="text-2xl font-bold text-gray-900">3</div>
+                <div className="text-2xl font-bold text-gray-900">2+</div>
                 <div className="text-sm text-gray-500">ans d'expérience</div>
               </motion.div>
               <motion.div
