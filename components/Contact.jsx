@@ -30,11 +30,13 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_xxx123",
-        "template_abc456",
-        formRef.current,
-        { publicKey: "your_public_key_here" }
-      );
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      }
+    );
 
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "" });
