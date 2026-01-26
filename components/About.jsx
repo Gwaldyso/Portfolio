@@ -68,7 +68,7 @@ export default function About() {
           <p>
             Je m’appelle Gwaldys, ingénieure en Big Data & Intelligence Artificielle,
             passionnée par la manière dont la donnée peut transformer des situations
-            complexes en décisions claires et actionnables. J’ai construit mon parcours
+            complexes en décisions claires et actionnables.J’ai construit mon parcours
             avec exigence et curiosité, à travers un diplôme d’ingénieure en Big Data
             Analytics à CY Tech (ex-EISTI) et un Master 2 en Data & IA à HETIC. Ces
             expériences m’ont permis de développer une approche à la fois rigoureuse et
@@ -77,7 +77,7 @@ export default function About() {
 
           <p>
             Au fil de mes missions en tant que Data Manager, Data Analyst et Data
-            Scientist, notamment en environnement industriel chez Safran, j’ai appris à
+            Scientist, notamment en environnement industriel chez Safran,j’ai appris à
             travailler sur des projets concrets, soumis à de fortes contraintes métiers.
             J’y ai développé une conviction forte : une solution data n’a de valeur que
             si elle est comprise, utilisée et utile sur le terrain.
@@ -86,13 +86,13 @@ export default function About() {
           <p>
             Récemment certifiée en IA générative, je m’oriente aujourd’hui vers ce domaine
             en plein essor avec l’envie de concevoir des solutions innovantes,
-            responsables et orientées impact. Mon objectif est d’aider les organisations
+            responsables et orientées impact.Mon objectif est d’aider les organisations
             à prendre des décisions stratégiques alignées avec leur réalité
             opérationnelle, grâce à des approches data-driven.
           </p>
 
           <p>
-            À travers ce portfolio, je partage ma manière de penser, de structurer et de
+            À travers ce portfolio,je partage ma manière de penser, de structurer et de
             résoudre des problématiques grâce à la data et à l’intelligence artificielle.
           </p>
 

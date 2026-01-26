@@ -220,7 +220,7 @@ export default function Projects() {
             Réalisations & études de cas
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Une sélection de projets data & IA orientés impact : de l’analyse à la
+            Une sélection de projets data & IA orientés "IMPACT" : de l’analyse à la
             décision.
           </p>
         </motion.div>
