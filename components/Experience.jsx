@@ -9,8 +9,25 @@ const fadeInUp = {
 };
 
 const experiences = [
+   {
+    role: "INGÉNIEURE DATA & IA",
+    company: "DATA LAB PERSONNEL",
+    location: "Paris",
+    period: "01.2025 — ",
+    highlights: [
+      "Conception de pipelines de transformation et préparation de données pour cas d’usage IA et analytiques",
+      "Développement d’un chatbot RAG (LLM + recherche vectorielle)",
+      "Réalisation d’analyses exploratoires et statistiques pour identification d’insights métier",
+      "Développement de modèles ML (classification, régression, NLP)",
+      "Implémentation de cas NLP (classification, extraction d’entités)",
+      "Structuration de datasets pour entraînement et fine-tuning",
+      "Intégration d’API (OpenAI / Mistral) et développement d’applications Streamlit",
+      
+
+    ],
+  },
   {
-    role: "Data Scientist",
+    role: "DATA SCIENTIST",
     company: "Safran Aircraft Engines",
     location: "Colombes",
     period: "10.2022 — 12.2023",
@@ -23,7 +40,7 @@ const experiences = [
     ],
   },
   {
-    role: "Planner – Gestion opérationnelle & coordination terrain Paris JO 2024",
+    role: "PLANNER – GESTION OPÉRATIONNELLE & COORDINATION TERRAIN PARIS JO 2024",
     company: "GL events",
     location: "Paris",
     period: "04.2024 — 08.2024",
@@ -36,7 +53,7 @@ const experiences = [
     ],
   },
   {
-    role: "Data Quality Analyst",
+    role: "DATA QUALITY ANALYST",
     company: "Bpifrance",
     location: "Paris",
     period: "04.2022 — 09.2022",
@@ -48,7 +65,7 @@ const experiences = [
     ],
   },
   {
-    role: "Data Manager",
+    role: "DATA MANAGER",
     company: "Hutchinson",
     location: "Bondoufle",
     period: "04.2021 — 08.2021",
@@ -60,7 +77,7 @@ const experiences = [
     ],
   },
   {
-    role: "Data Visualisation",
+    role: "DATA VISUALISATION",
     company: "Omnicom Media Group",
     location: "Boulogne-Billancourt",
     period: "06.2019 — 09.2019",
@@ -72,7 +89,7 @@ const experiences = [
     ],
   },
   {
-    role: "Data Manager",
+    role: "DATA MANAGER",
     company: "Airbus Operations SAS",
     location: "Toulouse",
     period: "04.2018 — 06.2018",
@@ -83,6 +100,7 @@ const experiences = [
       "Impact : gain de 45 minutes par traitement et amélioration de la cohérence des données",
     ],
   },
+   
 ];
 
 function ExperienceItem({
