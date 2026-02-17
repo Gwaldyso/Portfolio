@@ -11,7 +11,7 @@ const fadeInUp = {
 const experiences = [
    {
     role: "INGÉNIEURE DATA & IA",
-    company: "DATA LAB PERSONNEL",
+    company: "Data Lab Personnel",
     location: "Paris",
     period: "01.2025 — ",
     highlights: [
@@ -40,7 +40,7 @@ const experiences = [
     ],
   },
   {
-    role: "PLANNER – GESTION OPÉRATIONNELLE & COORDINATION TERRAIN PARIS JO 2024",
+    role: "PLANNER – GESTION OPÉRATIONNELLE PARIS JO 2024",
     company: "GL events",
     location: "Paris",
     period: "04.2024 — 08.2024",
