@@ -10,7 +10,7 @@ const fadeInUp = {
 
 const experiences = [
   {
-    role: "Apprentie Data Scientist",
+    role: "Data Scientist",
     company: "Safran Aircraft Engines",
     location: "Colombes",
     period: "10.2022 — 12.2023",
@@ -36,7 +36,7 @@ const experiences = [
     ],
   },
   {
-    role: "Stage Data Quality Analyst",
+    role: "Data Quality Analyst",
     company: "Bpifrance",
     location: "Paris",
     period: "04.2022 — 09.2022",
@@ -48,7 +48,7 @@ const experiences = [
     ],
   },
   {
-    role: "Stage Data Manager",
+    role: "Data Manager",
     company: "Hutchinson",
     location: "Bondoufle",
     period: "04.2021 — 08.2021",
@@ -60,7 +60,7 @@ const experiences = [
     ],
   },
   {
-    role: "Stage Data Visualisation",
+    role: "Data Visualisation",
     company: "Omnicom Media Group",
     location: "Boulogne-Billancourt",
     period: "06.2019 — 09.2019",
@@ -72,7 +72,7 @@ const experiences = [
     ],
   },
   {
-    role: "Stage Data Manager",
+    role: "Data Manager",
     company: "Airbus Operations SAS",
     location: "Toulouse",
     period: "04.2018 — 06.2018",
