@@ -10,10 +10,10 @@ const fadeInUp = {
 
 const tools = {
   "Data & Analyse": ["Python", "R", "SQL", "Excel", "VBA"],
-  "Machine Learning & IA": ["TensorFlow", "PyTorch", "Spark"],
+  "Machine Learning & IA": ["TensorFlow", "PyTorch", "Spark","NLP" , "LLM" , "RAG" , "Hugging Face", "LangChain"],
   "Data Visualisation": ["Power BI", "Tableau"],
-  "Databases & Cloud": ["MySQL", "MongoDB", "AWS"],
-  "Tools & Dev": ["Git", "Docker", "VS Code"],
+  "Databases & Cloud": ["MySQL", "MongoDB", "PostgreSQL" , "Supabase"],
+  "Tools & Dev": ["Git", "Docker", "VS Code" , "Streamlit" , "FastAPI"],
   "Gestion de projets": ["Trello", "Jira", "Confluence"],
 };
 
