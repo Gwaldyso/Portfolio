@@ -50,6 +50,63 @@ const projects = [
     image: "/project-rag.png",
   },
   {
+    title: "Analyse du churn e-commerce",
+    subtitle: "Data Analytics · SQL & BI",
+    description:
+      "Projet d’analyse visant à identifier les signaux de churn client à partir de données e-commerce afin de mieux piloter la rétention et orienter les décisions marketing.",
+    highlights: [
+      "Structuration et exploration des données clients, commandes et paiements",
+      "Définition d’indicateurs métier : churn, rétention, cohortes et CLV",
+      "Création de vues SQL et tableaux de bord pour faciliter l’analyse",
+      "Lecture business des résultats pour identifier les profils à risque",
+    ],
+    stack: ["SQL Server", "Power BI", "DAX", "Data Analysis"],
+    impact:
+      "Meilleure compréhension des comportements clients et mise en évidence de leviers d’action pour la fidélisation.",
+    github: "",
+    demo: "",
+    caseStudy: "/projects/churn-ecommerce",
+    image: "/project-churn.png",
+  },
+  {
+    title: "Programmation et analyse d’enquêtes",
+    subtitle: "Data Pipeline · R & Visualisation",
+    description:
+      "Conception d’un mini pipeline de collecte, traitement et restitution de données d’enquête, avec une logique orientée exploitation rapide des réponses et production d’indicateurs utiles.",
+    highlights: [
+      "Programmation d’enquêtes et structuration des données de réponse",
+      "Nettoyage, scoring et préparation des données pour l’analyse",
+      "Production de KPIs et visualisations pour faciliter l’interprétation",
+      "Approche de bout en bout : collecte, traitement et restitution",
+    ],
+    stack: ["R", "HTML/CSS", "Data Visualization", "Survey Analytics"],
+    impact:
+      "Centralisation plus fluide des réponses et transformation plus rapide des données terrain en informations exploitables.",
+    github: "",
+    demo: "",
+    caseStudy: "/projects/survey-analytics",
+    image: "/project-enquete.png",
+  },
+  {
+    title: "Analyse de données de pneumonie",
+    subtitle: "NLP · Données de santé",
+    description:
+      "Projet d’exploration et de traitement de données liées à la pneumonie, avec une approche NLP visant à extraire de l’information utile à partir de données médicales textuelles.",
+    highlights: [
+      "Prétraitement et nettoyage de données textuelles médicales",
+      "Exploration des variables et structuration des informations utiles",
+      "Premières expérimentations de classification et d’analyse NLP",
+      "Projet en cours orienté aide à l’analyse de données de santé",
+    ],
+    stack: ["Python", "NLP", "pandas", "scikit-learn"],
+    impact:
+      "Base de travail pour mieux exploiter des données médicales non structurées et soutenir l’analyse de cas de pneumonie.",
+    github: "",
+    demo: "",
+    caseStudy: "/projects/pneumonia-nlp",
+    image: "/project-pneumonie.png",
+  },
+  {
     title: "Dashboard décisionnel – Analyse & reporting Netflix",
     subtitle: "Business Intelligence · Pilotage",
     description:
@@ -104,7 +161,6 @@ function ProjectCard({
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
       className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col"
     >
-      {/* ✅ Image immersive avec zoom */}
       <div className="relative h-56 overflow-hidden">
         <Image
           src={image}
@@ -113,7 +169,6 @@ function ProjectCard({
           className="object-cover transition-transform duration-500 group-hover:scale-110"
           priority={false}
         />
-        {/* léger overlay pour le contraste */}
         <div className="absolute inset-0 bg-black/5" />
       </div>
 
@@ -127,7 +182,7 @@ function ProjectCard({
 
           {confidential && (
             <p className="text-xs font-mono text-red-500">
-              🔒 Projet industriel confidentiel
+              Projet industriel confidentiel
             </p>
           )}
 
@@ -136,7 +191,6 @@ function ProjectCard({
           </p>
         </div>
 
-        {/* Highlights */}
         {highlights?.length > 0 && (
           <ul className="space-y-2">
             {highlights.map((item) => (
@@ -148,7 +202,6 @@ function ProjectCard({
           </ul>
         )}
 
-        {/* Stack */}
         <div className="flex flex-wrap gap-2">
           {stack.map((tech) => (
             <span
@@ -160,7 +213,6 @@ function ProjectCard({
           ))}
         </div>
 
-        {/* Impact */}
         {impact && (
           <p className="text-sm text-gray-700">
             <span className="font-semibold text-gray-900">Impact :</span>{" "}
@@ -168,7 +220,6 @@ function ProjectCard({
           </p>
         )}
 
-        {/* Liens (sans case study) */}
         <div className="flex gap-4 pt-2 mt-auto items-center">
           {github && (
             <a
@@ -201,7 +252,6 @@ function ProjectCard({
   );
 }
 
-
 export default function Projects() {
   return (
     <motion.section
@@ -220,8 +270,8 @@ export default function Projects() {
             Réalisations & études de cas
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Une sélection de projets data & IA orientés "IMPACT" : de l’analyse à la
-            décision.
+            Une sélection de projets data & IA orientés impact : de l’analyse à
+            la décision.
           </p>
         </motion.div>
 
